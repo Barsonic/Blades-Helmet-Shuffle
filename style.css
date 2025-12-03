@@ -1,0 +1,42 @@
+
+* { box-sizing: border-box; }
+html,body { height:100%; margin:0; font-family: Arial, sans-serif; background:#000; display:flex; align-items:center; justify-content:center; }
+
+#stage { position: relative; width: 720px; height: 900px; overflow: hidden; border: 1px solid #111; background: #07207a; }
+#bg { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; pointer-events:none; }
+
+#game-area { position: absolute; left: 80px; right: 80px; bottom: 180px; height: 220px; pointer-events: none; }
+
+#puck { position: absolute; width: 60px; left: 250px; bottom: 120px; z-index: 0; pointer-events: none; transform-origin: 50% 50%; opacity: 0; }
+
+.helmet { position: absolute; width: 150px; bottom: 100px; z-index: 20; cursor: pointer; pointer-events: auto; filter: drop-shadow(0 8px 6px rgba(0,0,0,0.6)); }
+.helmet img { width: 100%; height:auto; display:block; }
+
+#h1 { left: 0px; }
+#h2 { left: 200px; }
+#h3 { right: 400px; }
+
+#shuffleBtn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 60px;          
+  min-width: 160px;
+  min-height: 60px;
+  font-size: 2rem;
+  font-weight: bold;
+  background: #ffd400;
+  color: #000;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 5px 0 rgba(0,0,0,0.25);
+  z-index: 70;
+  letter-spacing: 2px;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+}
+#shuffleBtn:active {
+  transform: translateX(-50%) translateY(3px) scale(0.98);
+  background: #eebb00;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.13);
+}
